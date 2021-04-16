@@ -1,0 +1,27 @@
+<div class="container mt-4 border border-primary rounded p-3" style="width: 60%">
+  <h2> Template Forms </h2>
+  <hr>
+  <form #userForm = "ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+      <label>First name</label>
+      <input type="text" #nameRef="ngModel" required class="form-control" name="firstname" ngModel>
+      <!--      <div [hidden]="nameRef.valid || nameRef.pristine" class="alert alert-danger"]>-->
+      <!--          Form "First name" validity is: FALSE-->
+      <!--      </div>-->
+    </div>
+    <div class="form-group">
+      <label>Last name</label>
+      <input type="text" #nameRef="ngModel" required class="form-control" name="lastname" ngModel>
+    </div>
+    <div class="form-group">
+      <label>E-mail</label>
+      <input type="text" #nameRef="ngModel" required class="form-control" name="email" ngModel>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="text" #nameRef="ngModel" required class="form-control" name="password" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+</div>
